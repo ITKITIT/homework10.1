@@ -6,16 +6,16 @@ list = [
 ]
 
 
-def filter_by_state(list, state_targe="EXECUTED"):
+def filter_by_state(my_list: list, state_targe="EXECUTED") -> list:
     """Функция которая принимает список словарей и опционально значение для ключа state"""
     list_targe = []
-    for key in list:
+    for key in my_list:
         if key.get("state") == state_targe:
             list_targe.append(key)
     return list_targe
 
 
-def sort_by_date(list, reverse=True):
+def sort_by_date(my_list: list, reverse=True) -> list :
     """Принимает список словарей и возвращает отсортированный список по убыванию даты"""
-    sort_date_list = sorted(list, key=lambda date: date.get("date"), reverse=True)
+    sort_date_list = sorted(my_list, key=lambda date: date.get("date"), reverse=True)
     return sort_date_list
