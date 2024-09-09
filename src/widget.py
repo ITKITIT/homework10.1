@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     def get_date(data: str) -> str:
         """Принимает на вход строку и возвращает дату"""
-
+        if data == "":
+            return ""
         return f"{data[8:10]}.{data[5:7]}.{data[:4]}"
 
 
