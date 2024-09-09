@@ -15,7 +15,10 @@ def filter_by_state(my_list: list, state_targe="EXECUTED") -> list:
     return list_targe
 
 
-def sort_by_date(my_list: list, reverse=True) -> list :
+def sort_by_date(my_list: list, reverse=True) -> list:
     """Принимает список словарей и возвращает отсортированный список по убыванию даты"""
     sort_date_list = sorted(my_list, key=lambda date: date.get("date"), reverse=True)
     return sort_date_list
+
+
+print(filter_by_state(list))
